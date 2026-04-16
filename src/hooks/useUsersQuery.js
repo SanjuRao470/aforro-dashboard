@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-//import { fetchUsers } from '@/store/slices/userSlice'
+import { fetchUsers } from '../store/slices/userSlice'
 
 export const useUsersQuery = () => {
   const dispatch = useDispatch()

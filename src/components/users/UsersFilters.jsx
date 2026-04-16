@@ -1,3 +1,4 @@
+
 import { Search } from 'lucide-react'
 import { Card, CardContent } from '../ui/Card'
 import { Input } from '../ui/Input'
@@ -26,16 +27,16 @@ export const UsersFilters = ({
           />
         </div>
 
-        <Select
+        <SelectDropdown
           value={sortOrder}
           onChange={(e) => setSortOrder(e.target.value)}
           className="w-full md:w-40"
         >
           <option value="asc">A–Z</option>
           <option value="desc">Z–A</option>
-        </Select>
+        </SelectDropdown>
 
-        <Select
+        <SelectDropdown
           value={cityFilter}
           onChange={(e) => setCityFilter(e.target.value)}
           className="w-full md:w-44"
@@ -46,7 +47,7 @@ export const UsersFilters = ({
               {city}
             </option>
           ))}
-        </Select>
+        </SelectDropdown>
 
       </CardContent>
     </Card>

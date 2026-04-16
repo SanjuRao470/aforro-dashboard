@@ -20,5 +20,5 @@ export const SelectDropdown = forwardRef(({ className, children, ...props }, ref
   )
 })
 
-Select.displayName = 'Select'
+SelectDropdown.displayName = 'SelectDropdown'
 
