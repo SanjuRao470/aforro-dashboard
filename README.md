@@ -1,16 +1,117 @@
-# React + Vite
+# 🚀 Aforro React Dashboard Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React-based dashboard application built as part of the Aforro technical assessment.  
+It replicates a Figma design and includes a fully functional Users module with API integration, search, sorting, filtering, and proper state handling.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📌 Features Implemented
 
-## React Compiler
+### 🎨 UI / Dashboard
+- Responsive dashboard layout based on provided Figma design
+- Sidebar navigation with active route highlighting
+- Header and layout structure with reusable components
+- Clean and modular component architecture
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+### 📊 Users Table (Core Feature)
+- Fetches user data from public API
+- Displays data in a structured table format
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Table Columns:**
+- Name  
+- Email  
+- Company Name  
+- City  
+
+---
+
+### ⚙️ Functionalities
+
+- 🔍 Search users by name or email
+- ↕️ Sort users by name (A–Z and Z–A)
+- 🏙️ Filter users by city
+- ⏳ Loading state handling during API fetch
+- ❌ Error handling for failed API requests
+- 📭 Empty state handling when no data matches filters
+
+---
+
+## 🌐 API Integration
+
+### Public API Used:
+https://jsonplaceholder.typicode.com/users
+
+### Implementation Details:
+- Data fetched using Axios
+- API logic separated into service layer (`services/`)
+- Data handling managed via custom hooks (`hooks/`)
+- State management structured for scalability
+
+---
+
+## 🧱 Tech Stack
+
+- React.js (Functional Components)
+- React Router DOM (Routing)
+- Redux Toolkit (UI state management)
+- React Query (Data fetching & caching)
+- Axios (HTTP requests)
+- Tailwind CSS (Styling)
+- Framer Motion (Animations)
+- Lucide React (Icons)
+- Vite (Build tool)
+
+---
+
+## 📁 Project Structure
+
+src/
+├── components/
+├── pages/
+├── hooks/
+├── services/
+├── store/
+├── constants/
+├── lib/
+├── App.jsx
+└── main.jsx
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/SanjuRao470/aforro-dashboard.git
+
+2. Install dependencies
+npm install
+
+3. Start development server
+npm run dev
+
+4. Open in browser
+http://localhost:5173
+
+---
+
+## 🧠 Assumptions & Decisions
+
+- Focused on clean and scalable component architecture  
+- Separated API logic into service and hook layers  
+- Prioritized usability with loading, error, and empty states  
+- Used reusable components for maintainability  
+- Balanced UI accuracy with responsiveness  
+- Followed production-level folder structure  
+
+---
+
+## 📌 Key Highlights
+
+- Clean and modular folder structure  
+- Separation of UI and business logic  
+- Fully functional API integration  
+- Responsive dashboard UI  
+- Production-style React architecture
