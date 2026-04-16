@@ -1,7 +1,8 @@
 
-import { Bell, Search, ChevronDown } from 'lucide-react'
+import { Bell,Moon, Search, ChevronDown,Sun  } from 'lucide-react'
 import { useSelector, useDispatch } from 'react-redux'
 import { toggleTheme } from '../../store/slices/themeSlice'
+import { Button } from '../ui/Button'
 import { MobileSidebarButton } from './Sidebar'
 
 export const Header = () => {
@@ -34,6 +35,18 @@ export const Header = () => {
 
       {/* RIGHT */}
       <div className="flex items-center gap-4">
+        <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => dispatch(toggleTheme())}
+            className="relative"
+          >
+            {mode === 'dark' ? (
+              <Sun className="h-5 w-5" />
+            ) : (
+              <Moon className="h-5 w-5" />
+            )}
+          </Button>
 
         {/* 🌍 Location */}
         <div className="hidden sm:flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300 cursor-pointer">
